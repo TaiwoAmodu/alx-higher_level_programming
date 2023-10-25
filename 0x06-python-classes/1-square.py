@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Defines a Square class."""
 
-
 class Square:
     """Represent a square."""
 
@@ -25,3 +24,11 @@ class Square:
         if value < 0:
             raise ValueError("Side length must be >= 0")
         self.__side = value
+
+    def area(self):
+        """Return the area of the square."""
+        return self.__side ** 2
+
+    def perimeter(self):
+        """Return the perimeter of the square."""
+        return 4 * self.__side
