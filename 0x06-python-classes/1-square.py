@@ -1,23 +1,23 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class."""
+"""Defines a Square class."""
 
 
-class Rectangle:
-    """Represent a rectangle."""
+class Square:
+    """Represent a square."""
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle.
+        """Initialize a new Square.
 
         Args:
-            width (int): The width of the new rectangle.
-            height (int): The height of the new rectangle.
+            width (int): The width of the new square.
+            height (int): The height of the new square.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Get/set the width of the rectangle."""
+        """Get/set the width of the square."""
         return self.__width
 
     @width.setter
@@ -30,7 +30,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set the height of the rectangle."""
+        """Get/set the height of the square."""
         return self.__height
 
     @height.setter
