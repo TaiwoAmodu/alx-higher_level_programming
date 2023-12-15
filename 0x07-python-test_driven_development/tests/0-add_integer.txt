@@ -1,0 +1,23 @@
+# Unit Test for add_integer function
+
+def test_add_integer():
+    # Test with two integers
+    assert add_integer(5, 7) == 12
+    # Test with one integer and one float, should cast the float to an integer
+    assert add_integer(3, 4.5) == 7
+    # Test with two floats, should cast both to integers
+    assert add_integer(2.5, 1.8) == 4
+    # Test with a non-integer type, should raise a TypeError
+    try:
+        add_integer("1", 2)
+    except TypeError as e:
+        assert str(e) == "a must be an integer or b must be an integer"
+    # Test with two non-integer types, should raise a TypeError
+    try:
+        add_integer("1.5", "2.7")
+    except TypeError as e:
+        assert str(e) == "a must be an integer or b must be an integer"
+
+if __name__ == '__main__':
+    test_add_integer()
+
